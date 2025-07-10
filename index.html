@@ -10,14 +10,64 @@
 <body>
   
   <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-12 my-3"><h2>Inserisci i tuoi dati</h2></div>
+      <div class="col-12">
+        <form action="#" method="post">
+          <div class="row">
+            <div class="col-12 col-md-6 my-3">
+              <label for="name" class="form-label">inserisci il tuo nome</label>
+              <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="col-12 col-md-6 my-3">
+              <label for="surname" class="form-label">inserisci il tuo cognome</label>
+              <input type="text" id="surname" name="surname" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 my-3">
+              <label for="sex" class="form-label">scegli il tuo sesso</label>
+              <select id="sex" name="sex">
+                <option value="uomo">uomo</option>
+                <option value="donna">donna</option>
+              </select> 
+            </div>
+            <div class="col-12 col-md-6 my-3">
+              <label for="date" class="form-label">scegli la data di partenza</label>
+              <input type="date" id="date" name="date" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-md-6 my-3">
+              <label for="eta" class="form-label">inserisci la tua età</label>
+              <input type="number" id="eta" name="eta" class="form-control">
+            </div>
+            <div class="col-12 col-md-6 my-3">
+              <label for="km" class="form-label">quanti km vuoi percorrere?</label>
+              <input type="number" id="km" name="km" class="form-control">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button type="submit" id="btn" >invio dei dati</button>
+            </div>
+          </div>
 
-  <label for="eta">inserisci la tua età</label>
-  <input type="number" id="eta" name="eta">
+        </form>
+      </div>
+    </div>
+  </div>
+  
 
-  <label for="km">quanti km vuoi percorrere?</label>
-  <input type="number" id="km" name="km">
 
-  <button type="submit" id="btn" >invio dei dati</button>
+
+
+
+  
+
+  
 
 
 

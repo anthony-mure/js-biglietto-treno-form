@@ -22,10 +22,15 @@ const button = document.getElementById('btn');
 button.addEventListener('click',function(event){
   event.preventDefault();
 
+   const name = document.getElementById('name').value;
+   const surname = document.getElementById('surname').value;
+   const sex = document.getElementById('sex').value;
+   const date = document.getElementById('date').value;
+
    const eta = document.getElementById('eta').value;
    const km = document.getElementById('km').value;
 
-console.log(eta , km);
+console.log(name,surname,sex,date,eta,km);
 
 
 
@@ -37,18 +42,23 @@ let ticketDiscount;
 
 if(eta < 18){
   ticketDiscount = priceTicket - (priceTicket * 20 / 100 );
-  console.log(ticketDiscount.toFixed(2));
+  
 }
 else if(eta > 65){
   ticketDiscount = priceTicket - (priceTicket * 40 / 100);
-  console.log(ticketDiscount.toFixed(2));
+  
 }
 else{
    ticketDiscount = priceTicket;
 }
-
+    console.log(ticketDiscount.toFixed(2));
 })
 
 /*MILESTONE 2:
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.*/
+
+//nell'html sistemare e implementare la form in cui l'utente inserirà i propri dati (nome , cognome ,sesso ,data di partenza )
+//aggiungere questi nuovi dati alla funzione evento click button in js
+//inniettare nell'html il calcolo finale con il prezzo del biglietto del passeggero
+//creare nell'html una card con i dati di recap del passeggero e il prezzo finale del biglietto
