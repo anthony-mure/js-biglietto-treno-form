@@ -7,26 +7,14 @@ il prezzo del biglietto è definito in base ai km (0.21 € al km)
 va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.*/
 
-let age = parseInt(prompt("inserite la vostra età "));
-console.log(age);
-
-let km = parseInt(prompt("inserite il numero di km che volete percorrere "));
-console.log(km);
-
-let priceTicket =(0.21 * km);
-console.log(priceTicket);
-
-let ticketDiscount;
+/*MILESTONE 1:
+Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch’essa da scrivere in console.*/ 
 
 
-if(age < 18){
-  ticketDiscount = priceTicket - (priceTicket * 20 / 100 );
-  console.log(ticketDiscount.toFixed(2));
-}
-else if(age > 65){
-  ticketDiscount = priceTicket - (priceTicket * 40 / 100);
-  console.log(ticketDiscount.toFixed(2));
-}
-else{
-   ticketDiscount = priceTicket;
-}
+// nell'html creo due imput per chiedere l'età e i km che l'utente vuole percorrere
+//  creo un bottone con id per l'invio dei dati
+// in js creo la funzione click sul bottone creato in html 
+//prendo i valori età e km degli imput
+//
+
+
