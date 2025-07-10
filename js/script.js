@@ -19,6 +19,8 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 
 const button = document.getElementById('btn');
 
+const recapData = document.getElementById('recapData');
+
 button.addEventListener('click',function(event){
   event.preventDefault();
 
@@ -39,7 +41,6 @@ console.log(priceTicket);
 
 let ticketDiscount;
 
-
 if(eta < 18){
   ticketDiscount = priceTicket - (priceTicket * 20 / 100 );
   
@@ -52,7 +53,20 @@ else{
    ticketDiscount = priceTicket;
 }
     console.log(ticketDiscount.toFixed(2));
-})
+
+    recapData.innerHTML = `
+  <ul>
+    <li><strong>NOME: </strong>${name}</li>
+    <li><strong>COGNOME: </strong>${surname}</li>
+    <li><strong>SESSO: </strong>${sex}</li>
+    <li><strong>DATA DI PARTENZA: </strong>${date}</li>
+    <li><strong>ETÀ: </strong>${eta}</li>
+    <li><strong>KILOMETRI TRATTA: </strong>${km}</li>
+    <li><strong>PREZZO BIGLIETTO: </strong>€ ${ticketDiscount.toFixed(2)}</li>
+  </ul>
+`;
+
+});
 
 /*MILESTONE 2:
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.

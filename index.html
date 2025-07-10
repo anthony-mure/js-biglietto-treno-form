@@ -28,8 +28,9 @@
           </div>
           <div class="row">
             <div class="col-12 col-md-6 my-3">
-              <label for="sex" class="form-label">scegli il tuo sesso</label>
-              <select id="sex" name="sex">
+              <label for="sex" class="form-label">sesso</label>
+              <select name="sex" id="sex"  class="form-select">
+                <option value="">scegli il tuo sesso</option>
                 <option value="uomo">uomo</option>
                 <option value="donna">donna</option>
               </select> 
@@ -50,10 +51,16 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-12">
+            <div class="col-12 my-3">
               <button type="submit" id="btn" >invio dei dati</button>
             </div>
           </div>
+          <div class="row">
+              <div class="col-12">
+                <div id="recapData"></div>
+              </div>
+          </div>
+          
 
         </form>
       </div>
