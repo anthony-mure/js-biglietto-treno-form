@@ -15,6 +15,40 @@ Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente
 //  creo un bottone con id per l'invio dei dati
 // in js creo la funzione click sul bottone creato in html 
 //prendo i valori età e km degli imput
-//
 
 
+const button = document.getElementById('btn');
+
+button.addEventListener('click',function(event){
+  event.preventDefault();
+
+   const eta = document.getElementById('eta').value;
+   const km = document.getElementById('km').value;
+
+console.log(eta , km);
+
+
+
+let priceTicket =(0.21 * km);
+console.log(priceTicket);
+
+let ticketDiscount;
+
+
+if(eta < 18){
+  ticketDiscount = priceTicket - (priceTicket * 20 / 100 );
+  console.log(ticketDiscount.toFixed(2));
+}
+else if(eta > 65){
+  ticketDiscount = priceTicket - (priceTicket * 40 / 100);
+  console.log(ticketDiscount.toFixed(2));
+}
+else{
+   ticketDiscount = priceTicket;
+}
+
+})
+
+/*MILESTONE 2:
+Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l’utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
+Il recap dei dati e l'output del prezzo finale, andranno quindi stampati in pagina (il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo). Questo richiederà un minimo di ricerca.*/
